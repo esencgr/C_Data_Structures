@@ -17,7 +17,7 @@ void show (node *r){
     do{
         printf("\n%d", iter -> x);
         iter = iter -> next;
-    }while (iter -> next != r);
+    }while (iter != r);
 } 
 
 node *create_v1 (node *r, int data){
@@ -25,21 +25,34 @@ node *create_v1 (node *r, int data){
         r = (node*) malloc(sizeof(node));
         r -> x = data;   
         r -> next = r;
-        return;
+        return r;
     }
+
     node *iter = r;
+    while ( iter -> next != r )
+        iter = iter -> next;
     iter -> next = NULL;
     iter -> next = (node*) malloc(sizeof(node));
     iter -> next -> x = data;
     iter -> next -> next = r;
-
+    return r;
 }
 
 int main(){
     node *root = NULL;
 
-    create_v1 (root, 2);    
-    create_v1 (root, 1);    
+    root = create_v1 (root, 1);    
+    root = create_v1 (root, 2);   
+    root = create_v1 (root, 3);   
+    root = create_v1 (root, 4);   
+    root = create_v1 (root, 5);   
+    root = create_v1 (root, 6);   
+    root = create_v1 (root, 7);   
+
+    // root = create_v1 (root, 2);    
+
+
+    show (root);
 
     printf("\n");
     return 0;
