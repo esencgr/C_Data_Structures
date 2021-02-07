@@ -10,18 +10,17 @@ int main(){
 
     node *root = NULL;
     root = (node*) malloc(sizeof(node));          // node *root = [ x ][ next ] --> [][]
+    
+    root -> x = 10;
+    root -> next = NULL;
 
-    node *iter = NULL;
-    int size, data;
-     
-    iter = root;
-    iter -> x = 10;
-    iter -> next = NULL;
+    root -> next = (node*) malloc(sizeof(node));
+    root -> next -> x = 20;
+    root -> next -> next = NULL;
 
-    printf("enter list size :");
-    scanf("%d", &size);
-
-    for (int i = 0; i < size; i++){
+    node * iter;
+    iter = root -> next;
+    for (int i = 0; i < 5; i++){
         iter -> next = (node*) malloc(sizeof(node));
         iter = iter -> next; 
         iter -> x = i * 2;

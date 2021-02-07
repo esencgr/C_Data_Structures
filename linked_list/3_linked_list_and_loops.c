@@ -18,10 +18,10 @@ int main(){
     node *root = NULL;
     root = (node*) malloc(sizeof(node));          // node *root = [ x ][ next ] --> [][]
 
-    node *iter = NULL;
-    int size;
+    node *iter = NULL;    
     iter = root;
-    for (int i = 0; i < 3; i++){
+    
+    for (int i = 0; i < 5; i++){
         iter -> x = i * 2;
         iter -> next = NULL;
         iter -> next = (node*) malloc(sizeof(node));
@@ -30,17 +30,7 @@ int main(){
     
     iter = root;
     show(iter);
-    
-    // while (iter -> next != NULL){
-    //     printf("\n%d", iter -> x);
-    //     iter = iter -> next; 
-    // } 
 
-    // for (int i = 0; iter -> next != NULL ; i++){
-    //     printf("\n%d", iter -> x);
-    //     iter = iter -> next; 
-    // }
-    
     printf("\n");
     return 0;
 }
