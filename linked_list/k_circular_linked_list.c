@@ -26,6 +26,7 @@ void add_end_v1 (node *r, int size){
         node *iter = r;
         while (iter -> next != r)
             iter = iter -> next;     
+
         iter -> next = (node*) malloc(sizeof(node));
         iter -> next -> x = i*3;
         iter -> next -> next = r;
@@ -35,7 +36,8 @@ void add_end_v1 (node *r, int size){
 void add_end_v2 (node *r, int data){
         node *iter = r;
         while (iter -> next != r)
-            iter = iter -> next;     
+            iter = iter -> next;    
+             
         iter -> next = (node*) malloc(sizeof(node));
         iter -> next -> x = data;
         iter -> next -> next = r;
@@ -45,14 +47,18 @@ int main(){
     node *root = NULL;
     root = (node*) malloc(sizeof(node));     
     root -> x = 100;
-
     root -> next = root;
+    
     printf("\ncurrent data");
     show (root);
     printf("\n");
     
     printf("\nupdated data");
     add_end_v1 (root, 3);
+    show (root);
+
+    printf("\nupdated data");
+    add_end_v2 (root, 3);
     show (root);
 
     printf("\n");

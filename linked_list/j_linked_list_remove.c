@@ -67,7 +67,7 @@ list *remove_element (list *head, int d){
 
     if (iter -> next == NULL){
         printf ("\ndata not found..");
-        return 0;
+        return head;
     }
     
     temp = iter -> next;
@@ -84,7 +84,7 @@ int main (){
     lst = add_to_end (lst, 30);
     show (lst);
     
-    lst = remove_element (lst, 10);
+    lst = remove_element (lst, 99);
     show(lst);
     lst = remove_element (lst, 30);
     show (lst);
