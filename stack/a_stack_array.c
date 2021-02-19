@@ -6,9 +6,11 @@ int size = 2;
 int top = 0;
 
 void push (int data){
+
     if (array == NULL){
         array = (int*) malloc (sizeof(int) * 2);
     }
+
     if (top >= size){
         int *temp = (int*) malloc (sizeof(int) * size * 2);
         
@@ -19,16 +21,19 @@ void push (int data){
         array = temp; 
         size *= 2 ;
     }
+
     array[top++] = data;
     printf ("\nsize of array : %d", size);
 }
 
 int pop (void){
+
     if (top == 0){
         printf ("underflow");
         size = 0;
         return size;
     }
+
     if (top <= size / 2){
         int *temp = (int*) malloc (sizeof(int) * size / 2);
         
@@ -41,6 +46,7 @@ int pop (void){
         printf ("size of array : %d\n", size);
 
     }
+    
     return array[--top];
 }
 

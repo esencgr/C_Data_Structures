@@ -43,7 +43,6 @@ int pop (node *r){
         r -> data = 0;
         r = NULL;
         free (r);
-
         return rval;
     }
     
