@@ -13,7 +13,8 @@ node *get_node (){
     return r;
 }
 
-void enque (int d ){
+void enque (int d){
+
     node *last;
     if (r == NULL){
         r = get_node ();
@@ -32,7 +33,7 @@ void enque (int d ){
 }
 
 int deque (){
-    
+
     if (r == NULL){
         printf ("\nlinked list empty.\n");
         return -1;          
@@ -47,20 +48,20 @@ int deque (){
 }
 
 void show (node * r){
-    printf ("\n");
 
+    printf ("\n");
     printf ("list -> ");
     while (r != NULL){
         printf ("%d ", r -> data);
         r = r -> next;
     }
-
     printf ("\n");
+
 }
 
 
 int main (){
-    
+
     int val;
     for (int i = 1; i < 5; i++){
         enque (i*2);
@@ -71,8 +72,7 @@ int main (){
         val = deque ();
         printf ("%d ", val);
     }
-        
-
     return 0;
+
 }
 

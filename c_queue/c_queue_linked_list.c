@@ -11,7 +11,7 @@ node *get_node (){
     return r;
 }
 
-node *enque (node *r, int d ){
+node *enque (node *r, int d){
 
     if (r == NULL){
         r = get_node (r);
@@ -49,16 +49,16 @@ node *deque (node *r){
 
 }
 
-void show (node * r){
-    printf ("\n");
+void show (node *r){
 
+    printf ("\n");
     printf ("list -> ");
     while (r != NULL){
         printf ("%d ", r -> data);
         r = r -> next;
     }
-
     printf ("\n");
+    
 }
 
 int main (){

@@ -81,7 +81,7 @@ void show (){
 
 int main (){
 
-    for (int i = 0; i < 20; i++){
+    for (int i = 0; i < 5; i++){
         enque (i*10);
     }
 
@@ -90,7 +90,8 @@ int main (){
     printf( "\nsize : %d  head : %d  body : %d\n", size, head, body);
     printf ("\n"); 
     
-    for (int i = 0; i < 13; i++){
+    printf ("deque : ");
+    for (int i = 0; i < 3; i++){
         printf ("%d ", deque());
     }   
     
