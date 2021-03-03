@@ -48,7 +48,7 @@ int search (node *t, int d){
     
     if (t -> data == d)
         return 1;
-    
+     
     if (search (t->right, d) == 1)
         return 1;
     
