@@ -14,7 +14,7 @@ stack *def (){
     s -> top = 0;  
     return s ;
 }
-
+for 
 void push (stack *s, int val){
     if (s -> top == 0){
         s -> arr = (int*) malloc (sizeof(int) * 2);
