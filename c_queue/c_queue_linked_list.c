@@ -5,7 +5,7 @@ typedef struct n{
     int data;
     struct n * next; 
 }node;
-
+typede
 node *get_node (){
     node *r = (node*) malloc (sizeof(node));
     return r;

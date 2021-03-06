@@ -49,8 +49,6 @@ int pop (void){
     
     return array[--top];
 }
-
-
 void show (){    
     printf ("\n");
 
@@ -73,6 +71,6 @@ int main (){
         printf ("\n%d popped ", pop());
         show ();
     }
-  
+    
     return 0;
 }
