@@ -84,7 +84,6 @@ int main (){
     for (int i = 0; i < 5; i++){
         enque (i*10);
     }
-
     space();
     show();
     printf( "\nsize : %d  head : %d  body : %d\n", size, head, body);
